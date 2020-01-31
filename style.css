@@ -3,3 +3,30 @@
   background:none;
   outline:none;
 }
+p{
+  padding-top:0;
+  padding-bottom:0;
+  margin-top: 0;
+  margin-bottom:0;
+}
+#minecart-count {
+  margin:0px 0px 0px 10px;
+  padding:0px 0px 0px 10px;
+}
+#pickaxe-count {
+  margin:0px 0px 0px 10px;
+  padding:0px 0px 0px 10px;
+}
+#dynamite-count {
+  margin:0px 0px 0px 10px;
+  padding:0px 0px 0px 10px;
+}
+#dwarf-count {
+  margin:0px 0px 0px 10px;
+  padding:0px 0px 0px 10px;
+}
+.btn{
+  justify-content:flex-start;
+  align-items:flex-start;
+  padding:0px;
+}
