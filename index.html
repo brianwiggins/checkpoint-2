@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ruby Miner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family:'Courier New', Courier, monospace; background-color:#413c69">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12" style="font-size: 46px;text-align:center; color:black;">
+      Ruby Miner
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"><div class="card" id="upgrades" style="color:black; background-color: #4a47a3; border-radius:10%">
+      <div class="card-header text-center">Upgrades</div>
+      <div class="card-body">
+        <div class="row" id="ruby-row">
+          <div class="col-xs-6">
+            <p>Pickaxes: </p>
+          </div>
+          <div class="col-xs-6">
+            <p id="pickaxe-count">0</p>
+          </div>
+        </div>
+        <div class="row" id="clicks-row">
+          <div class="col-xs-6">
+            <p>Dynamite: </p>
+          </div>
+          <div class="col-xs-6">
+            <p id="dynamite-count">0</p>
+          </div>
+        </div>
+        <div class="row" id="clicks-row">
+          <div class="col-xs-6">
+            <p>Carts: </p>
+          </div>
+          <div class="col-xs-6">
+            <p id="minecart-count">0</p>
+          </div>
+        </div>
+        <div class="row" id="clicks-row">
+          <div class="col-xs-6">
+            <p>Dwarves: </p>
+          </div>
+          <div class="col-xs-6">
+            <p id="dwarf-count">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12" style="color:black">
+      <button class="btn btn-block" style="background-color:#F4B07C; width:100%; margin-top:10%" onclick="buy('pickaxe');clickCount(); autoMine()">Buy Pickaxe</button>
+      <p>Cost: <p id="pickaxe-cost">20</p> Rubies</p>      <button class="btn btn-block" style="background-color:#F4B07C; width:100%; margin-top:10%" onclick="buy('dynamite');clickCount(); autoMine()">Buy Dynamite</button>
+      <p>Cost: <p id="dynamite-cost">300</p> Rubies</p>
+      <button class="btn btn-block" style="background-color:#F4B07C; width:100%; margin-top:10%" onclick="buy('minecart');clickCount(); autoMine()">Buy Minecart</button>
+      <p>Cost: <p id="minecart-cost">400</p> Rubies</p>      <button class="btn btn-block" style="background-color:#F4B07C; width:100%; margin-top:10%" onclick="buy('dwarves');clickCount(); autoMine()">Buy Dwarf</button>
+      <p>Cost: <p id="dwarf-cost">600</p> Rubies</p>    </div>
+  </div>
+    <div class="col-xs-4" style="color:black">Welcome to Ruby Miner. Here, you will mine rubies using 4 tools available to you (at a cost).
+      <div class="col-12">Pickaxes bring 1 extra ruby per click.</div>
+      <div class="col-12">Dynamite brings 15 extra rubies per click</div>
+      <div class="col-12">Minecarts will bring you 10 rubies every 5 seconds</div>
+      <div class="col-12">Dwarves will work hard to bring you 20 rubies every 5 seconds</div>
+    </div>
+    <div class="col-xs-4">
+      <div class="card" style="color:black; background-color: #AD62AA;  border-radius:10%" >
+        <div class="card-header text-center">Stats</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <img src="ruby.png" style="width:50px;height:50px; display:block;margin:auto;">
+            </div>
+          </div>
+          <div class="row" id="ruby-row">
+            <div class="col-xs-6">
+              <p>Rubies: </p>
+            </div>
+            <div class="col-xs-6">
+              <p id="ruby-count">0</p>
+            </div>
+          </div>
+          <div class="row" id="clicks-row">
+            <div class="col-xs-6">
+              <p>Clicks: </p>
+            </div>
+            <div class="col-xs-6">
+              <p id="click-count">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="color:black">
+        <br><br> 
+        <p>Click the ore to start gathering rubies! &#8595;</p>
+        <button class="btn btn-block transparent" onclick="mine();clickCount()">
+          <title>Mine this Ruby</title>
+          <img src="rock.png" style="width:30vw;height:30vh; margin-top:25vh;">
+          </button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
